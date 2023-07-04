@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.logo-text {
+  text-transform: uppercase;
+  @include font(14, 18, 800, -3);
+
+  color: $logo-text-color;
+  @include tablet {
+    @include font(18, 20, none, none);
+  }
+}
+.logo-text-main {
+  font-style: italic;
+}
+.logo-icon {
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}

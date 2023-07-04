@@ -1,0 +1,15 @@
+.nav-lsit {
+  display: flex;
+  column-gap: 24px;
+}
+.nav-item {
+  @include font(14, 16, 500, -2);
+}
+
+.nav-link {
+  @include transition;
+  &:hover,
+  &:focus {
+    color: $nav-link-color-active;
+  }
+}

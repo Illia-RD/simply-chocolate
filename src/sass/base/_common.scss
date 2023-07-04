@@ -1,0 +1,18 @@
+body {
+  min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+  @include push--auto;
+  height: 100%;
+}
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.title {
+  @include font(20, 24, 500, -3);
+}

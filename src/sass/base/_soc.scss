@@ -1,0 +1,14 @@
+.soc-list {
+  display: flex;
+  column-gap: 18px;
+}
+.soc-icon {
+  fill: currentColor;
+}
+.soc-link {
+  @include transition;
+  &:hover,
+  &:focus {
+    color: $soc-icon-color-active;
+  }
+}

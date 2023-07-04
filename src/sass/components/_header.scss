@@ -1,0 +1,28 @@
+.header-section {
+  color: $page-bg-color-light;
+}
+.header-content-wrap {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+  margin-left: 188px;
+}
+
+.header-nav-link {
+  color: $nav-link-color-dark;
+}
+.header-soc {
+  margin-left: auto;
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+.header-soc-link {
+  color: $soc-icon-color-dark;
+}

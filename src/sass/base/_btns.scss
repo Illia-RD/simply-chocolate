@@ -1,0 +1,22 @@
+.btn {
+  padding: 12px 28px;
+  @include tablet {
+    padding: 14px 40px;
+  }
+  background-color: transparent;
+  border: none;
+}
+.mob-menu-btn {
+  fill: #111111;
+  padding: 0;
+  margin-left: auto;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    fill: $active-color;
+  }
+  @include tablet {
+    display: none;
+  }
+}
