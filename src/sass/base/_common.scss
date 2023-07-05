@@ -15,4 +15,7 @@ img {
 }
 .title {
   @include font(20, 24, 500, -3);
+  @include tablet {
+    @include font(28, 34, 500, -3);
+  }
 }

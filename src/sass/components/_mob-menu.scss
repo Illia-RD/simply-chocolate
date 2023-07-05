@@ -1,0 +1,14 @@
+.mob-menu-btn {
+  fill: #111111;
+  padding: 0;
+  margin-left: auto;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    fill: $active-color;
+  }
+  @include desktop {
+    display: none;
+  }
+}

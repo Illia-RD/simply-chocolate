@@ -1,5 +1,18 @@
+.hero-section {
+  padding-bottom: 72px;
+  @include tablet {
+    padding-bottom: 50px;
+  }
+  @include desktop {
+    padding-bottom: 72px;
+  }
+}
 .hero-content-wrap {
   padding: 395px 20px 20px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 30px;
 
   @include bg-img(
@@ -35,14 +48,19 @@
   }
 }
 .hero-title {
-  width: 290px;
-
+  max-width: 290px;
+  color: $title-color-light;
+  @include tablet {
+    max-width: 484px;
+  }
   margin-bottom: 32px;
 }
 .hero-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .hero-nav-list {
   column-gap: 14px;
@@ -52,31 +70,73 @@
   }
 }
 .hero-nav-item {
-  padding: 12px 28px;
   border-radius: 41px;
+  color: $nav-link-color-light;
+  font-weight: 600;
+  @include transition;
   &:first-child {
-    background-color: $btn-bg-color-light-second;
+    background-color: $btn-color-light-second;
+    &:hover,
+    &:focus {
+      color: $btn-color-light-second;
+      background-color: $btn-color-light-third;
+    }
   }
   &:last-child {
-    background-color: $btn-bg-color-transparent;
-    border: 1px solid $border-color-light;
+    background-color: $btn-color-transparent;
+    border: 1px solid $btn-color-light-first;
+    &:hover,
+    &:focus {
+      color: $btn-color-light-second;
+      border-color: $btn-color-light-second;
+      background-color: $btn-color-transparent;
+    }
   }
 }
 .hero-nav-link {
-  color: $nav-link-color-light;
-  font-weight: 600;
-}
-.scroll-down {
-  display: flex;
-  column-gap: 12px;
-  align-items: center;
+  display: block;
+  font-weight: inherit;
+  color: inherit;
+  padding: 12px 28px;
 }
 
 .scroll-down-link {
-  padding: 6px;
+  @include transition;
+  color: $btn-color-light-first;
+  column-gap: 12px;
+  display: flex;
+  align-items: center;
+  @include font(12, 14, 500, -3);
+  @include tablet {
+    @include font(14, 18, 500, -3);
+  }
+  .scroll-down-icon-wrap {
+    color: $btn-color-light-second;
+  }
+  &:hover,
+  &:focus {
+    color: $btn-color-light-second;
+    .scroll-down-icon-wrap {
+      background-color: $btn-color-light-second;
+      color: $btn-color-light-first;
+    }
+  }
+}
 
-  background-color: $nav-link-color-light;
+.scroll-down-icon-wrap {
+  @include transition;
+
+  color: $btn-color-light-first;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background-color: $btn-color-light-first;
   border-radius: 50%;
+  @include tablet {
+    padding: 8px;
+  }
 }
 .scroll-down-icon {
+  fill: currentColor;
 }
