@@ -1,0 +1,39 @@
+.advantages-section {
+  background: $page-bg-color-dark;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include tablet {
+    padding: 50px 0;
+  }
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px 48px;
+  }
+}
+.advantages-item {
+  max-width: 308px;
+}
+.advantages-icon-wrap {
+  padding: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid $border-color-light;
+  margin-bottom: 22px;
+}
+.advantages-subtitle {
+  @include font(18, 24, 600, 0);
+  color: $subtitle-color-light;
+  margin-bottom: 18px;
+}
+.advantages-content {
+  color: $content-color-light-translucent;
+  @include font(14, 18, 400, 0);
+}
