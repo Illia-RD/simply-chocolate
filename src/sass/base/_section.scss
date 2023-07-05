@@ -1,6 +1,5 @@
 .section {
   @include push--auto;
-}
-.header-section {
-  padding-top: 24px;
+  display: block;
+  color: $page-bg-color-light;
 }

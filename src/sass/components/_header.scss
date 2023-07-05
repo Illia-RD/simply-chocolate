@@ -1,10 +1,18 @@
 .header-section {
-  color: $page-bg-color-light;
+  padding: 20px 0 14px 0;
+
+  @include tablet {
+    padding: 24px 0;
+  }
+  @include desktop {
+    padding: 24px 0 32px 0;
+  }
 }
-.header-content-wrap {
+.header-container {
   display: flex;
   align-items: center;
 }
+
 .header-nav {
   display: none;
   @include desktop {
