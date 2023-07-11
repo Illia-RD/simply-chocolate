@@ -1,0 +1,25 @@
+.taste-text {
+  @include push--auto;
+  @include tablet {
+    max-width: 486px;
+  }
+}
+.taste-title {
+  text-align: center;
+  color: $title-color-dark;
+  padding: 0 26px;
+  @include font(20, 24, 600, -3);
+  @include tablet {
+    padding: 0 37.5px;
+    @include font(24, 28, 600, -3);
+  }
+}
+.taste-title-accent {
+  color: $title-color-accent;
+}
+.taste-content {
+  color: $content-color-dark;
+  text-align: center;
+
+  @include font(14, 18, 400, -2);
+}
