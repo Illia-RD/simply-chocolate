@@ -2,5 +2,11 @@
   @include push--auto;
   display: block;
   background-color: $page-bg-color-light;
-  padding-bottom: 128px;
+  padding-bottom: 72px;
+  @include tablet {
+    padding-bottom: 100px;
+  }
+  @include desktop {
+    padding-bottom: 128px;
+  }
 }
